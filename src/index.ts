@@ -9,7 +9,17 @@ Escriba un programa que pida al usuario dos números enteros, y luego retorne la
 const numeroA: number = Number(prompt("Ingrese el primer valor"));
 const numeroB: number = Number(prompt("Ingrese el segundo valor"));
 let suma: number = 0;
+if (numeroA > numeroB) {
+  /* Opción 1 */
+  // const aux: number = numeroA;
+  // numeroA = numeroB;
+  // numeroB = aux;
 
+  /* Opcion 2 */
+  numeroA += numeroB;
+  numeroB = numeroA - numeroB;
+  numeroA -= numeroB;
+}
 for (let i = numeroA; i <= numeroB; i++) {
   suma += i;
 }
